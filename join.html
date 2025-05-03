@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteBase – Join the Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #002145;
+      --white: #ffffff;
+      --light-blue: #e6f0ff;
+      --dark: #111;
+      --text-light: #f4f4f4;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--white);
+      color: var(--blue);
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .join-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: var(--light-blue);
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--blue);
+      color: var(--white);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Join NoteBase</h1>
+
+  <form class="join-form">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="e.g. Christine Lorence" required>
+
+    <label for="email">UofT Email</label>
+    <input type="email" id="email" name="email" placeholder="e.g. name@mail.utoronto.ca" required>
+
+    <label for="program">Program & Year</label>
+    <input type="text" id="program" name="program" placeholder="e.g. Human Biology, Year 2">
+
+    <label for="message">Why do you want to join?</label>
+    <textarea id="message" name="message" rows="4" placeholder="Optional..."></textarea>
+
+    <button type="submit">Request Access</button>
+  </form>
+</body>
+</html>

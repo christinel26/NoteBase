@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteBase – Flashcards</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #002145;
+      --white: #ffffff;
+      --light-blue: #e6f0ff;
+      --dark: #111;
+      --text-light: #f4f4f4;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--white);
+      color: var(--blue);
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .flashcard-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .flashcard {
+      background-color: var(--light-blue);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .flashcard h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .flashcard p {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .flashcard a {
+      color: var(--blue);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Course Flashcards</h1>
+
+  <div class="flashcard-section">
+    <div class="flashcard">
+      <h3>PSYA02 – Brain & Behaviour</h3>
+      <p>Deck by: Sarah</p>
+      <a href="https://quizlet.com/exampledeck1" target="_blank">View on Quizlet</a>
+    </div>
+
+    <div class="flashcard">
+      <h3>BIOA01 – Cell Biology</h3>
+      <p>Deck by: Christine</p>
+      <a href="https://quizlet.com/exampledeck2" target="_blank">View on Quizlet</a>
+    </div>
+
+    <div class="flashcard">
+      <h3>STAB22 – Probability Terms</h3>
+      <p>Deck by: Vansh</p>
+      <a href="https://quizlet.com/exampledeck3" target="_blank">View on Quizlet</a>
+    </div>
+  </div>
+</body>
+</html>

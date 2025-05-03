@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoteBase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #002145;
+      --white: #ffffff;
+      --light-blue: #e6f0ff;
+      --dark: #111;
+      --text-light: #f4f4f4;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--blue);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: var(--dark);
+      color: var(--text-light);
+    }
+
+    header {
+      background-color: var(--blue);
+      color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .founders {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .founder {
+      flex: 1 1 30%;
+      background: var(--light-blue);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .feature {
+      background: var(--light-blue);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--blue);
+      color: var(--white);
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <header>
+    <h1>NoteBase</h1>
+    <p>By students, for students. Collaborate, share, and succeed together.</p>
+  </header>
+
+  <div class="container">
+    <section class="section">
+      <h2>👩‍💻 Meet the Founders</h2>
+      <div class="founders">
+        <div class="founder">
+          <h3>Christine Lorence</h3>
+          <p>Main Founder & Platform Architect</p>
+        </div>
+        <div class="founder">
+          <h3>Vansh Anand</h3>
+          <p>Tech & Strategy Lead</p>
+        </div>
+        <div class="founder">
+          <h3>Sarah Chen</h3>
+          <p>Community & Content Coordinator</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>📚 Platform Features</h2>
+      <div class="features">
+        <div class="feature">
+          <h4>Course Notes</h4>
+          <p>Upload and access notes by course, instructor, and topic.</p>
+        </div>
+        <div class="feature">
+          <h4>Flashcards</h4>
+          <p>Create and browse decks. Study smarter.</p>
+        </div>
+        <div class="feature">
+          <h4>Q&A Forum</h4>
+          <p>Ask classmates questions anonymously or publicly.</p>
+        </div>
+        <div class="feature">
+          <h4>CCR Recognition</h4>
+          <p>Earn points, contribute, and get recognized on your Co-Curricular Record.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>🚀 Ready to Join?</h2>
+      <p><a href="#">Submit your UofT email to request access →</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 NoteBase — Built by UTSC Students</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteBase – All Notes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #002145;
+      --white: #ffffff;
+      --light-blue: #e6f0ff;
+      --dark: #111;
+      --text-light: #f4f4f4;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--white);
+      color: var(--blue);
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .filter-section {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    select {
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .notes-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .note-card {
+      background-color: var(--light-blue);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .note-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .note-card p {
+      margin-bottom: 0.25rem;
+      font-size: 0.95rem;
+    }
+
+    .note-card a {
+      color: var(--blue);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 Browse All Notes</h1>
+
+  <div class="filter-section">
+    <label for="course-select">Filter by Course: </label>
+    <select id="course-select">
+      <option value="all">All Courses</option>
+      <option value="PSYA02">PSYA02</option>
+      <option value="BIOA01">BIOA01</option>
+      <option value="STAB22">STAB22</option>
+    </select>
+  </div>
+
+  <div class="notes-list" id="notes-container">
+    <div class="note-card" data-course="PSYA02">
+      <h3>Lecture 4 Notes</h3>
+      <p>Course: PSYA02</p>
+      <p>Uploaded by: Sarah</p>
+      <a href="#">View PDF</a>
+    </div>
+    <div class="note-card" data-course="BIOA01">
+      <h3>Midterm Study Guide</h3>
+      <p>Course: BIOA01</p>
+      <p>Uploaded by: Christine</p>
+      <a href="#">View PDF</a>
+    </div>
+    <div class="note-card" data-course="STAB22">
+      <h3>Practice Problems</h3>
+      <p>Course: STAB22</p>
+      <p>Uploaded by: Vansh</p>
+      <a href="#">View PDF</a>
+    </div>
+  </div>
+
+  <script>
+    const courseSelect = document.getElementById('course-select');
+    const notesContainer = document.getElementById('notes-container');
+    const noteCards = notesContainer.querySelectorAll('.note-card');
+
+    courseSelect.addEventListener('change', function () {
+      const selected = this.value;
+      noteCards.forEach(card => {
+        const course = card.getAttribute('data-course');
+        card.style.display = (selected === 'all' || selected === course) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

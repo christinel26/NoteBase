@@ -21,6 +21,27 @@
       padding: 2rem;
     }
 
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--blue);
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      background: var(--light-blue);
+    }
+
+    nav a:hover {
+      background-color: var(--blue);
+      color: var(--white);
+    }
+
     h1 {
       text-align: center;
       font-size: 2.5rem;
@@ -62,6 +83,14 @@
   </style>
 </head>
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="notes.html">Notes</a>
+    <a href="flashcards.html">Flashcards</a>
+    <a href="questions.html">Q&A</a>
+    <a href="join.html">Join</a>
+  </nav>
+
   <h1>🔐 Join NoteBase</h1>
 
   <form class="join-form">
